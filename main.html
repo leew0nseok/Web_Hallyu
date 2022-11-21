@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hallyu</title>
+    <style>
+      h1 {
+        font-family: '궁서';
+        background-color: mistyrose;
+        width: 160%;
+        height: 170px;
+        text-align: center;
+        font-size: 70px;
+      }
+      div {
+        display: inline-block;
+        padding: 10px;
+      }
+      #music {
+        position: absolute;
+        top: -10px;
+      }
+      @keyframes textColorAnimation {
+        0% {
+          color: black;
+        }
+        50% {
+          color: red;
+        }
+        100% {
+          color: blue;
+        }
+      }
+      p > span {
+        animation-name: textColorAnimation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      #firsthr {
+        border: 4px solid black;
+      }
+      #menutitle {
+        border-radius: 50px;
+        background: thistle;
+        padding: 20px;
+        width: 150px;
+      }
+      .menu {
+        display: inline-block;
+        background: rgb(58, 176, 107);
+        width: 150px;
+        height: 130px;
+        margin: 10px;
+      }
+      #body {
+        width: 150px;
+        height: 130px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        <div>
+          <img src="images/태극기.jpg" style="width: 160px; height: 80px" />
+        </div>
+        <div>
+          <p id="title" font-size: 40px><span>한류(Hallyu)</span></p>
+        </div>
+        <div>
+          <img src="images/광화문.jpg" style="width: 160px; height: 80px" />
+        </div>
+        <div id="music">
+          <audio src="datas/애국가.mp3" controls autoplay loop></audio>
+        </div>
+      </h1>
+    </div>
+    <hr id="firsthr" />
+    <h3>
+      <p id="menutitle">Hallyu 종류</p>
+    </h3>
+    <hr />
+    <div id="body">
+      <div class="menu">
+        <ol type="1">
+          <li>K-POP</li>
+          <li>K-FOOD</li>
+          <li>K-MOVIE</li>
+          <li>K-DRAMA</li>
+          <li>K-ACTOR</li>
+        </ol>
+      </div>
+      <div id="rightdiv">
+        <div id="map">
+          <p>대한민국 여행지도</p>
+          <img src="images/여행지도.jpg" style="width: 80px; height: 160px" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
