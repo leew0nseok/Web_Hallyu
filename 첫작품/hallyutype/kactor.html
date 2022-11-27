@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-ACTOR</title>
+  <link type="text/css" rel="stylesheet" href="../한류종류.css" />
+  <script>
+    function change(){  
+      var p =document.getElementById("leftdiv");
+      p.innerHTML = "<h3>최선호 한국 배우</h3><p></p><img src='images/최선호배우.PNG'/>";
+    }
+  </script>
+</head>
+<body>
+  <h1>
+    <div class="titlebar">
+        <img src="images/이민호.jpg" style="width: 160px; height: 80px" />
+      </div>
+      <div class="titlebar">
+        <p id="title"><span>K-ACTOR</span></p>
+      </div>
+      <div class="titlebar" style="height: 115.2px">
+        <img src="images/현빈.jpg" style="width: 160px; height: 80px" />
+      </div>
+  </h1>
+  <hr id="firsthr" />
+  <div class = "divdiv" id = "leftdiv">
+    <h3>최선호 한국 배우</h3>
+    <table>
+      <thead>
+        <tr><th class="rank">순위</th><th>이름</th><th>프로필 링크</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="rank">1</td><td>이민호</td><td><a href="https://namu.wiki/w/%EC%9D%B4%EB%AF%BC%ED%98%B8(1987)" target="_blank">이민호 프로필</a></td></tr>
+        <tr><td class="rank">2</td><td>현빈</td><td><a href="https://namu.wiki/w/%ED%98%84%EB%B9%88"target="_blank">현빈 프로필</a></td></tr>
+        <tr><td class="rank">3</td><td>공유</td><td><a href="https://namu.wiki/w/%EA%B3%B5%EC%9C%A0(%EB%B0%B0%EC%9A%B0)"target="_blank">공유 프로필</a></td></tr>
+        <tr><td class="rank">4</td><td>송혜교</td><td><a href="https://namu.wiki/w/%EC%86%A1%ED%98%9C%EA%B5%90"target="_blank">송혜교 프로필</a></td></tr>
+        <tr><td class="rank">5</td><td>송중기</td><td><a href="https://namu.wiki/w/%EC%86%A1%EC%A4%91%EA%B8%B0"target="_blank">송중기 프로필</a></td></tr>
+      </tbody>
+    </table>
+    <hr>
+    <input type="button" value="그림으로 보기" onclick="change()">
+
+  </div>
+  <div class="divdiv" id="rightdiv">
+    <h3>뭘 넣을까?</h3>
+  </div>
+</body>
+</html>

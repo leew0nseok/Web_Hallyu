@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+h1 {
+  font-family: '궁서';
+  background-color: mistyrose;
+  width: 100%;
+  height: 160px;
+  text-align: center;
+  font-size: 70px;
+}
+audio {
+  filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+  width: 200px;
+  height: 25px;
+}
+.titlebar {
+  /* 제목부분 div클래스 */
+  display: inline-block;
+  padding: 10px;
+}
+@keyframes textColorAnimation {
+  /*한류(Hallyu)애니메이션 */
+  0% {
+    color: black;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: blue;
+  }
+}
+p > span {
+  /*한류(Hallyu)애니메이션 */
+  animation-name: textColorAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+#firsthr {
+  /*첫 hr */
+  border: 3px solid black;
+}
+#menutitle {
+  border-radius: 50px;
+  background: thistle;
+  padding: 20px;
+  width: 150px;
+}
+.menu {
+  background: rgb(58, 176, 107);
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  font-size: 20px;
+}
+.menutitle {
+  background: red;
+  font-size: 30px;
+}

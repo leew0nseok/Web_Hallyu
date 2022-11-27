@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hallyu</title>
+    <link type="text/css" rel="stylesheet" href="main.css" />
+    <script>
+      function createDIV() {
+        var obj = document.getElementById("definiton");
+        var newDIV = document.createElement("div");
+        newDIV.innerHTML = "한류는 좁게는 음악, 영화, 드라마 같은 대중문화부터 시작하여 넓게는 패션, 화장품, 음식, 관광, 무술, 산업 등 대한민국의 문화가 세계에 알려지는 현상을 뜻한다. 한류라는 용어는 중화권에서 1990년대 후반 H.O.T. 신드롬이 일어나고, 한국의 아이돌 댄스 그룹과 한국 드라마가 중화권에서 청소년층에게 인기를 끌면서 생겨난 신조어다. 이 용어가 직접적으로 만들어진 계기는 모 기사에 따르면 1997년 대만 미디어를 통해서라고 한다. 대만에선 한파주의보를 한류(寒流)라고 부르는데, 그해 선풍적인 인기를 끈 한국 드라마들의 경쟁력을 경계해야 한다는 의미에서 한류(韓流)로 바꾸어 불렀다고 한다.";
+        newDIV.setAttribute("id", "myDiv");
+        newDIV.style.backgroundColor = "thistle";
+        newDIV.style.fontsize = "15px";
+        newDIV.onclick = function() {
+          var p = this.parentElement; // 부모 HTML 태그 요소
+          p.removeChild(this); // 자신을 부모로부터 제거
+        };	
+        obj.appendChild(newDIV);
+      }
+    </script>
+  </head>
+  <body style="background: rgb(205, 158, 186)">
+    <h1>
+      <div class="titlebar">
+        <img src="imgs/태극기.jpg" style="width: 160px; height: 80px" />
+      </div>
+      <div class="titlebar">
+        <p id="title"><span>한류(Hallyu)</span></p>
+      </div>
+      <div class="titlebar" style="height: 115.2px">
+        <img src="imgs/광화문.jpg" style="width: 160px; height: 80px" />
+      </div>
+      <div class="titlebar">
+        <audio src="datas/애국가.mp3" controls autoplay loop></audio>
+      </div>
+    </h1>
+    <div id ="definiton">
+      <a href="javascript:createDIV()">한류의 정의</a>
+    </div>
+    <hr id="firsthr" />
+    <div class="menu" id="secondmenu" >
+      <ul>
+        <li><p class="menutitle"><span>Hallyu 종류</span></p>
+          <ol type="1">
+            <li><a href="hallyutype/kpop.html">K-POP</a></li>
+            <li><a href="hallyutype/kfood.html">K-FOOD</a></li>
+            <li><a href="hallyutype/kmovie.html">K-MOVIE</a></li>
+            <li><a href="hallyutype/kdrama.html">K-DRAMA</a></li>
+            <li><a href="hallyutype/kactor.html">K-ACTOR</a></li>
+          </ol>
+        </li>
+        <!-- <li><p class="menutitle"><span>Hallyu 관련</span></p>
+          <ol type="1">
+            <li><a href="hallyurelated/한류인식.html">Hallyu 인식</a></li>
+            <li><a href="hallyurelated/소비형태.html">Hallyu 콘텐츠 소비형태</a></li>
+            <li><a href="hallyurelated/한류인기.html">Hallyu 인기</a></li>
+            <li><a href="hallyurelated/파급효과.html">Hallyu 파급효과</a></li>
+          </ol>
+        </li> -->
+      </ul>
+    </div>
+    </div>
+  </body>
+</html>

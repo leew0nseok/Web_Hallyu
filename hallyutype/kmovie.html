@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K-MOVIE</title>
+    <link type="text/css" rel="stylesheet" href="ktype.css" />
+    <script>
+      function change() {
+        var p = document.getElementById('leftdiv')
+        p.innerHTML =
+          "<h3>최선호 한국 영화</h3><p></p><img src='images/최선호영화.PNG'/>"
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>
+          <a href="kmovie.html"><span>K-MOVIE</span></a>
+        </h1>
+        <div class="nav">
+          <ul>
+            <li><a href="kpop.html">K-POP</a></li>
+            <li><a href="kfood.html">K-FOOD</a></li>
+            <li><a href="kmovie.html">K-MOVIE</a></li>
+            <li><a href="kdrama.html">K-DRAMA</a></li>
+            <li><a href="kactor.html">K-ACTOR</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr id="firsthr" />
+      <div class="divdiv" id="leftdiv">
+        <h3>최선호 한국 영화</h3>
+        <h5>프로필 링크를 선택하면 해당 프로필로 이동합니다.</h5>
+        <table>
+          <thead>
+            <tr>
+              <th class="rank">순위</th>
+              <th>제목</th>
+              <th>프로필 링크</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="rank">1</td>
+              <td>기생충</td>
+              <td>
+                <a
+                  href="https://namu.wiki/w/%EA%B8%B0%EC%83%9D%EC%B6%A9(%EC%98%81%ED%99%94)"
+                  target="_blank"
+                  >기생충 프로필</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="rank">2</td>
+              <td>부산행</td>
+              <td>
+                <a
+                  href="https://namu.wiki/w/%EB%B6%80%EC%82%B0%ED%96%89"
+                  target="_blank"
+                  >부산행 프로필</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="rank">3</td>
+              <td>서복</td>
+              <td>
+                <a
+                  href="https://namu.wiki/w/%EC%84%9C%EB%B3%B5(%EC%98%81%ED%99%94)"
+                  target="_blank"
+                  >서복 프로필</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="rank">4</td>
+              <td>미드나이트</td>
+              <td>
+                <a
+                  href="https://namu.wiki/w/%EB%AF%B8%EB%93%9C%EB%82%98%EC%9D%B4%ED%8A%B8(%EC%98%81%ED%99%94)"
+                  target="_blank"
+                  >미드나이트 프로필</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="rank">4</td>
+              <td>승리호</td>
+              <td>
+                <a
+                  href="https://namu.wiki/w/%EC%8A%B9%EB%A6%AC%ED%98%B8"
+                  target="_blank"
+                  >승리호 프로필</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="rank">5</td>
+              <td>콜</td>
+              <td>
+                <a
+                  href="https://namu.wiki/w/%EC%BD%9C(%EC%98%81%ED%99%94)"
+                  target="_blank"
+                  >콜 프로필</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td class="rank">5</td>
+              <td>싱크홀</td>
+              <td>
+                <a
+                  href="https://namu.wiki/w/%EC%8B%B1%ED%81%AC%ED%99%80(%EC%98%81%ED%99%94)"
+                  target="_blank"
+                  >싱크홀 프로필</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <input type="button" value="그림으로 보기" onclick="change()" />
+      </div>
+      <div class="divdiv" id="rightdiv">
+        <h3>뭘 넣을까?</h3>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,102 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hallyu</title>
-    <style>
-      h1 {
-        font-family: '궁서';
-        background-color: mistyrose;
-        width: 160%;
-        height: 170px;
-        text-align: center;
-        font-size: 70px;
-      }
-      div {
-        display: inline-block;
-        padding: 10px;
-      }
-      #music {
-        position: absolute;
-        top: -10px;
-      }
-      @keyframes textColorAnimation {
-        0% {
-          color: black;
+    <title>한류(Hallyu)</title>
+    <link type="text/css" rel="stylesheet" href="main.css" />
+    <script>
+      function createDIV() {
+        var obj = document.getElementById('definiton')
+        var newDIV = document.createElement('div')
+        newDIV.innerHTML =
+          '한류는 좁게는 음악, 영화, 드라마 같은 대중문화부터 시작하여 넓게는 패션, 화장품, 음식, 관광, 무술, 산업 등 대한민국의 문화가 세계에 알려지는 현상을 뜻한다. 한류라는 용어는 중화권에서 1990년대 후반 H.O.T. 신드롬이 일어나고, 한국의 아이돌 댄스 그룹과 한국 드라마가 중화권에서 청소년층에게 인기를 끌면서 생겨난 신조어다. 이 용어가 직접적으로 만들어진 계기는 모 기사에 따르면 1997년 대만 미디어를 통해서라고 한다. 대만에선 한파주의보를 한류(寒流)라고 부르는데, 그해 선풍적인 인기를 끈 한국 드라마들의 경쟁력을 경계해야 한다는 의미에서 한류(韓流)로 바꾸어 불렀다고 한다.'
+        newDIV.setAttribute('id', 'myDiv')
+        newDIV.style.backgroundColor = 'thistle'
+        newDIV.style.fontsize = '15px'
+        newDIV.onclick = function () {
+          var p = this.parentElement // 부모 HTML 태그 요소
+          p.removeChild(this) // 자신을 부모로부터 제거
         }
-        50% {
-          color: red;
-        }
-        100% {
-          color: blue;
-        }
+        obj.appendChild(newDIV)
       }
-      p > span {
-        animation-name: textColorAnimation;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-      }
-      #firsthr {
-        border: 4px solid black;
-      }
-      #menutitle {
-        border-radius: 50px;
-        background: thistle;
-        padding: 20px;
-        width: 150px;
-      }
-      .menu {
-        display: inline-block;
-        background: rgb(58, 176, 107);
-        width: 150px;
-        height: 130px;
-        margin: 10px;
-      }
-      #body {
-        width: 150px;
-        height: 130px;
-      }
-    </style>
+    </script>
   </head>
   <body>
-    <div id="header">
-      <h1>
-        <div>
-          <img src="images/태극기.jpg" style="width: 160px; height: 80px" />
-        </div>
-        <div>
-          <p id="title" font-size: 40px><span>한류(Hallyu)</span></p>
-        </div>
-        <div>
-          <img src="images/광화문.jpg" style="width: 160px; height: 80px" />
-        </div>
-        <div id="music">
+    <div class="container">
+      <div class="header">
+        <h1>
+          <a href="#"><span>한류(Hallyu)</span></a>
+        </h1>
+        <div class="musicbar">
           <audio src="datas/애국가.mp3" controls autoplay loop></audio>
         </div>
-      </h1>
-    </div>
-    <hr id="firsthr" />
-    <h3>
-      <p id="menutitle">Hallyu 종류</p>
-    </h3>
-    <hr />
-    <div id="body">
-      <div class="menu">
-        <ol type="1">
-          <li>K-POP</li>
-          <li>K-FOOD</li>
-          <li>K-MOVIE</li>
-          <li>K-DRAMA</li>
-          <li>K-ACTOR</li>
-        </ol>
-      </div>
-      <div id="rightdiv">
-        <div id="map">
-          <p>대한민국 여행지도</p>
-          <img src="images/여행지도.jpg" style="width: 80px; height: 160px" />
+        <div class="nav">
+          <ul>
+            <li><a href="hallyutype/kpop1.html">K-POP</a></li>
+            <li><a href="hallyutype/kfood.html">K-FOOD</a></li>
+            <li><a href="hallyutype/kmovie.html">K-MOVIE</a></li>
+            <li><a href="hallyutype/kdrama.html">K-DRAMA</a></li>
+            <li><a href="hallyutype/kactor.html">K-ACTOR</a></li>
+          </ul>
         </div>
+      </div>
+      <div class="hero">
+        <h2><span>한류(Hallyu)</span></h2>
+        <p>한류에 대해 관심을 가져주셔서 감사합니다.</p>
+        <button>
+          <div id="definiton">
+            <a href="javascript:createDIV()">한류의 정의</a>
+          </div>
+        </button>
       </div>
     </div>
   </body>
