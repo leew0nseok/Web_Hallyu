@@ -8,14 +8,14 @@
     <link type="text/css" rel="stylesheet" href="ktype.css" />
     <script>
       function change() {
-        var p = document.getElementById('leftdiv')
+        let p = document.getElementById('leftdiv')
         p.innerHTML =
-          "<h3>최선호 한국 가수/그룹</h3><p></p><img src='images/최선호kpop.PNG'/>"
+          "<h3>최선호 한국 가수/그룹</h3><p></p><img src='images/최선호kpop.PNG'/ width='630px' height='430px'>"
       }
-      function change2() {
-        var p = document.getElementById('rightdiv')
-        p.innerHTML =
-          "<h3>역대 K-Pop 가수/그룹 앨범 초동 순위</h3><p></p><img src='images/초동순위.PNG'/>"
+      function showImage() {
+        let sel = document.getElementById('view')
+        let img = document.getElementById('viewimg')
+        img.src = sel.options[sel.selectedIndex].value
       }
     </script>
   </head>
@@ -117,9 +117,19 @@
         <input type="button" value="그림으로 보기" onclick="change()" />
       </div>
       <div class="divdiv" id="rightdiv">
-        <h3>역대 K-Pop 가수/그룹 앨범 초동 순위</h3>
+        <h3>가수 미리보기</h3>
+        <form>
+          <select id="view" onchange="showImage()">
+            <option value="images/BTS.jpg" selected>방탄소년단</option>
+            <option value="images/블랙핑크.jpg">블랙핑크</option>
+            <option value="images/아이유.jpg">아이유</option>
+            <option value="images/리사.jpg">리사</option>
+            <option value="images/싸이.jpg">싸이</option>
+            <option value="images/트와이스.jpg">트와이스</option>
+          </select>
 
-        <input type="button" value="순위 확인하기" onclick="change2()" />
+          <img id="viewimg" src="images/BTS.jpg" alt="" />
+        </form>
       </div>
     </div>
   </body>

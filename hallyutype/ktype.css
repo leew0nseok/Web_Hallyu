@@ -144,3 +144,7 @@ div.details {
 div.details p {
   font-size: 1em;
 }
+#viewimg {
+  width: 620px;
+  height: 370px;
+}

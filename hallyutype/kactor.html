@@ -8,9 +8,14 @@
     <link type="text/css" rel="stylesheet" href="ktype.css" />
     <script>
       function change() {
-        var p = document.getElementById('leftdiv')
+        let p = document.getElementById('leftdiv')
         p.innerHTML =
           "<h3>최선호 한국 배우</h3><p></p><img src='images/최선호배우.PNG'/>"
+      }
+      function showImage() {
+        let sel = document.getElementById('view')
+        let img = document.getElementById('viewimg')
+        img.src = sel.options[sel.selectedIndex].value
       }
     </script>
   </head>
@@ -101,7 +106,18 @@
         <input type="button" value="그림으로 보기" onclick="change()" />
       </div>
       <div class="divdiv" id="rightdiv">
-        <h3>뭘 넣을까?</h3>
+        <h3>배우 사진 미리보기</h3>
+        <form>
+          <select id="view" onchange="showImage()">
+            <option value="images/이민호.jpg" selected>이민호</option>
+            <option value="images/현빈.jpg">현빈</option>
+            <option value="images/공유.jpg">공유</option>
+            <option value="images/송혜교.jpg">송혜교</option>
+            <option value="images/송중기.jpg">송중기</option>
+          </select>
+
+          <img id="viewimg" src="images/이민호.jpg" alt="" />
+        </form>
       </div>
     </div>
   </body>

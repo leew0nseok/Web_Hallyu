@@ -8,9 +8,14 @@
     <link type="text/css" rel="stylesheet" href="ktype.css" />
     <script>
       function change() {
-        var p = document.getElementById('leftdiv')
+        let p = document.getElementById('leftdiv')
         p.innerHTML =
           "<h3>최선호 한국 드라마</h3><p></p><img src='images/최선호드라마.PNG'/>"
+      }
+      function showImage() {
+        let sel = document.getElementById('view')
+        let img = document.getElementById('viewimg')
+        img.src = sel.options[sel.selectedIndex].value
       }
     </script>
   </head>
@@ -114,7 +119,19 @@
         <input type="button" value="그림으로 보기" onclick="change()" />
       </div>
       <div class="divdiv" id="rightdiv">
-        <h3>뭘 넣을까?</h3>
+        <h3>드라마 포스터 미리보기</h3>
+        <form>
+          <select id="view" onchange="showImage()">
+            <option value="images/오징어게임.jpg" selected>오징어 게임</option>
+            <option value="images/사랑의불시착.png">사랑의 불시착</option>
+            <option value="images/빈센조.jpg">빈센조</option>
+            <option value="images/펜트하우스.jpg">펜트하우스</option>
+            <option value="images/갯마을차차차.jpg">갯마을 차차차</option>
+            <option value="images/태양의후예.png">태양의 후예</option>
+          </select>
+
+          <img id="viewimg" src="images/오징어게임.jpg" alt="" />
+        </form>
       </div>
     </div>
   </body>

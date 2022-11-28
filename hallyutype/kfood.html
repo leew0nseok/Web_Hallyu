@@ -7,7 +7,7 @@
     <title>K-FOOD</title>
     <link type="text/css" rel="stylesheet" href="ktype.css" />
     <script>
-      var names = [
+      let names = [
         '김밥',
         '김치',
         ' 불고기',
@@ -19,7 +19,7 @@
         '잡채',
         '짜장면',
       ] //음식이름
-      var fooddetails = [
+      let fooddetails = [
         '김밥(Gimbap, Seaweed roll)은 밥을 김으로 감싸 둥글게 만 뒤 잘라낸 음식으로, 오늘날 한국에서는 넓은 의미의 분식으로 여겨진다. ',
         '김치는 한국의 전통 발효식품이자 일종의 조리 양식이다.',
         '불고기는 여러 동물의 고기를 얇게 썰어 양념으로 재운 뒤 불에 구워 먹는 한국 요리의 하나이다.',
@@ -31,7 +31,7 @@
         '당근, 양파, 고기, 목이버섯, 시금치 (야채 색상의 조화와 영양의 균형을 중시한다) 등을 기름에 볶은 후 삶은 당면을 간장양념으로 같이 볶는 요리다.',
         '짜장면 혹은 자장면은 튀긴 춘장과 야채·고기를 식용유에 볶아서 만든 것을 면에 비벼 먹는 한국식 중화 요리이다.',
       ] //음식설명
-      var files = [
+      let files = [
         'foodimgs/김밥.jpg',
         'foodimgs/김치.jpg',
         'foodimgs/불고기.jpg',
@@ -43,17 +43,17 @@
         'foodimgs/잡채.jpg',
         'foodimgs/짜장면.jpg',
       ]
-      var imgs = new Array() //이미지 객체를 저장할 배열
-      for (var i = 0; i < files.length; i++) {
+      let imgs = new Array() //이미지 객체를 저장할 배열
+      for (let i = 0; i < files.length; i++) {
         imgs[i] = new Image()
         imgs[i].src = files[i]
       }
-      var next = 1
+      let next = 1
       function change() {
         // 다음 이미지 출력
-        var img = document.getElementById('food')
-        var foo = document.getElementById('foodname')
-        var infor = document.getElementById('infor')
+        let img = document.getElementById('food')
+        let foo = document.getElementById('foodname')
+        let infor = document.getElementById('infor')
         img.src = imgs[next].src // 이미지 변경
         foo.innerHTML = names[next]
         infor.innerHTML = fooddetails[next]

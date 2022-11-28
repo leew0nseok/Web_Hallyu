@@ -8,9 +8,14 @@
     <link type="text/css" rel="stylesheet" href="ktype.css" />
     <script>
       function change() {
-        var p = document.getElementById('leftdiv')
+        let p = document.getElementById('leftdiv')
         p.innerHTML =
-          "<h3>최선호 한국 영화</h3><p></p><img src='images/최선호영화.PNG'/>"
+          "<h3>최선호 한국 영화</h3><p></p><img src='images/최선호영화.PNG'/ width='630px' height='430px'>"
+      }
+      function showImage() {
+        let sel = document.getElementById('view')
+        let img = document.getElementById('viewimg')
+        img.src = sel.options[sel.selectedIndex].value
       }
     </script>
   </head>
@@ -125,7 +130,20 @@
         <input type="button" value="그림으로 보기" onclick="change()" />
       </div>
       <div class="divdiv" id="rightdiv">
-        <h3>뭘 넣을까?</h3>
+        <h3>영화 포스터 미리보기</h3>
+        <form>
+          <select id="view" onchange="showImage()">
+            <option value="images/기생충.jpg" selected>기생충</option>
+            <option value="images/부산행.jpg">부산행</option>
+            <option value="images/서복.jpg">서복</option>
+            <option value="images/미드나이트.jpg">미드나이트</option>
+            <option value="images/승리호.jpg">승리호</option>
+            <option value="images/콜.jpg">콜</option>
+            <option value="images/싱크홀.jpg">싱크홀</option>
+          </select>
+
+          <img id="viewimg" src="images/기생충.jpg" alt="" />
+        </form>
       </div>
     </div>
   </body>
