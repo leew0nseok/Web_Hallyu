@@ -149,8 +149,16 @@ div.details p {
   height: 370px;
   margin-top: 20px;
 }
+/* 레시피사이트 이동 이미지 */
 #recipeimg {
   width: 300px;
   height: 150px;
   margin-top: 20px;
+}
+/* 사진 미리보기 폼(버튼) */
+#view {
+  width: 150px;
+  border-color: black;
+  font-size: 1em;
+  background-color: transparent;
 }
