@@ -8,18 +8,24 @@
     <link type="text/css" rel="stylesheet" href="main.css" />
     <script>
       function createDIV() {
-        var obj = document.getElementById('definiton')
-        var newDIV = document.createElement('div')
+        let obj = document.getElementById('definiton')
+        let newDIV = document.createElement('div')
         newDIV.innerHTML =
           '한류는 좁게는 음악, 영화, 드라마 같은 대중문화부터 시작하여 넓게는 패션, 화장품, 음식, 관광, 무술, 산업 등 대한민국의 문화가 세계에 알려지는 현상을 뜻한다. 한류라는 용어는 중화권에서 1990년대 후반 H.O.T. 신드롬이 일어나고, 한국의 아이돌 댄스 그룹과 한국 드라마가 중화권에서 청소년층에게 인기를 끌면서 생겨난 신조어다. 이 용어가 직접적으로 만들어진 계기는 모 기사에 따르면 1997년 대만 미디어를 통해서라고 한다. 대만에선 한파주의보를 한류(寒流)라고 부르는데, 그해 선풍적인 인기를 끈 한국 드라마들의 경쟁력을 경계해야 한다는 의미에서 한류(韓流)로 바꾸어 불렀다고 한다.'
         newDIV.setAttribute('id', 'myDiv')
         newDIV.style.backgroundColor = 'thistle'
         newDIV.style.fontsize = '15px'
         newDIV.onclick = function () {
-          var p = this.parentElement // 부모 HTML 태그 요소
+          let p = this.parentElement // 부모 HTML 태그 요소
           p.removeChild(this) // 자신을 부모로부터 제거
         }
         obj.appendChild(newDIV)
+      }
+
+      function changeSound() {
+        let sel = document.getElementById('sound')
+        let aud = document.getElementById('playsound')
+        aud.src = sel.options[sel.selectedIndex].value
       }
     </script>
   </head>
@@ -27,10 +33,25 @@
     <div class="container">
       <div class="header">
         <h1>
-          <a href="#"><span>한류(Hallyu)</span></a>
+          <a href="/main.html"><span>한류(Hallyu)</span></a>
         </h1>
         <div class="musicbar">
-          <audio src="datas/애국가.mp3" controls autoplay loop></audio>
+          <form>
+            <p>
+              배경음악 선택
+              <select id="sound" onchange="changeSound()">
+                <option value="datas/애국가.mp3" selected>애국가</option>
+                <option value="datas/아리랑.mp3">아리랑</option>
+              </select>
+            </p>
+          </form>
+          <audio
+            id="playsound"
+            src="datas/애국가.mp3"
+            controls
+            autoplay
+            loop
+          ></audio>
         </div>
         <div class="nav">
           <ul>

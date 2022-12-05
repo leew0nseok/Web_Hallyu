@@ -92,3 +92,10 @@ h2 span {
 .container .hero button:hover {
   background-color: darkslategray;
 }
+
+#sound {
+  width: 80px;
+  border-color: black;
+  font-size: 1em;
+  background-color: transparent;
+}
