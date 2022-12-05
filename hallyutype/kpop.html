@@ -12,10 +12,41 @@
         p.innerHTML =
           "<h3>최선호 한국 가수/그룹</h3><p></p><img src='images/최선호kpop.PNG' width='630px' height='430px'/>"
       }
-      function showImage() {
-        let sel = document.getElementById('view')
-        let img = document.getElementById('viewimg')
-        img.src = sel.options[sel.selectedIndex].value
+      function selectMV() {
+        let found = null
+        let singers = document.getElementsByName('singer')
+        for (let i = 0; i < singers.length; i++) {
+          if (singers[i].checked == true) {
+            found = singers[i]
+          }
+        }
+        let p = document.getElementById('mvlink')
+        switch (found.value) {
+          case '방탄소년단':
+            p.innerHTML =
+              '<iframe width="560" height="315" src="https://www.youtube.com/embed/gdZLi9oWNZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            break
+          case '블랙핑크':
+            p.innerHTML =
+              '<iframe width="560" height="315" src="https://www.youtube.com/embed/ioNng23DkIM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            break
+          case '아이유':
+            p.innerHTML =
+              '<iframe width="560" height="315" src="https://www.youtube.com/embed/v7bnOxV4jAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            break
+          case '리사':
+            p.innerHTML =
+              '<iframe width="560" height="315" src="https://www.youtube.com/embed/awkkyBH2zEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            break
+          case '싸이':
+            p.innerHTML =
+              '<iframe width="560" height="315" src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            break
+          case '트와이스':
+            p.innerHTML =
+              '<iframe width="560" height="315" src="https://www.youtube.com/embed/ePpPVE-GGJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            break
+        }
       }
     </script>
   </head>
@@ -117,18 +148,47 @@
         <input type="button" value="그림으로 보기" onclick="change()" />
       </div>
       <div class="divdiv" id="rightdiv">
-        <h3>가수 미리보기</h3>
+        <h3>가수 노래 듣기</h3>
         <form>
-          <select id="view" onchange="showImage()">
-            <option value="images/BTS.jpg" selected>방탄소년단</option>
-            <option value="images/블랙핑크.jpg">블랙핑크</option>
-            <option value="images/아이유.jpg">아이유</option>
-            <option value="images/리사.jpg">리사</option>
-            <option value="images/싸이.jpg">싸이</option>
-            <option value="images/트와이스.jpg">트와이스</option>
-          </select>
-
-          <img id="viewimg" src="images/BTS.jpg" alt="" />
+          <label
+            ><input
+              type="radio"
+              name="singer"
+              value="방탄소년단"
+            />방탄소년단</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="singer"
+              value="블랙핑크"
+            />블랙핑크</label
+          >
+          <label
+            ><input type="radio" name="singer" value="아이유" />아이유</label
+          >
+          <label><input type="radio" name="singer" value="리사" />리사</label>
+          <label><input type="radio" name="singer" value="싸이" />싸이</label>
+          <label
+            ><input
+              type="radio"
+              name="singer"
+              value="트와이스"
+            />트와이스</label
+          >
+          <input type="button" value="M/V보기" onclick="selectMV()" />
+          <div id="mvlink">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/gdZLi9oWNZg"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
         </form>
       </div>
     </div>

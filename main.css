@@ -90,12 +90,20 @@ h2 span {
   transition: all 0.4s;
 }
 .container .hero button:hover {
-  background-color: darkslategray;
+  background-color: rgb(87, 106, 106);
 }
+/* .container .hero .inhero {
+  display: inline-block;
+} */
 
 #sound {
   width: 80px;
   border-color: black;
   font-size: 1em;
   background-color: transparent;
+}
+
+#map {
+  width: 380px;
+  height: 500px;
 }
