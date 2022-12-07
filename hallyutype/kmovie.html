@@ -17,13 +17,23 @@
         let img = document.getElementById('viewimg')
         img.src = sel.options[sel.selectedIndex].value
       }
+      function moveToMain(url) {
+        let answer
+        //페이지를 이동하기 전에 confirm()을 사용해 다시 한번 확인한다.
+        //확인을 선택하면 answer에  true, 취소를 선택하면 false 값이 들어간다.
+        answer = confirm('홈으로 이동하시겠습니까')
+        //확인을 선택한 경우 자바스크립트를 호출할 때 같이 넘어온 url이라는 변수에 들어있는 주소로 페이지 이동
+        if (answer == true) {
+          location = url
+        }
+      }
     </script>
   </head>
   <body>
     <div class="container">
       <div class="header">
         <h1>
-          <a href="../main.html"><span>HOME</span></a>
+          <a href="javascript:moveToMain('../main.html')"><span>HOME</span></a>
         </h1>
         <div class="nav">
           <ul>
