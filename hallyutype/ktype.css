@@ -93,12 +93,12 @@ h2 span {
   background-color: darkslategray;
 }
 
-table {
+#leftdiv table {
   /* 이중 테두리 제거 */
   border-collapse: collapse;
   background-color: rgb(154, 131, 128);
 }
-td,
+#leftdiv td,
 th {
   /* 모든 셀에 적용 */
   text-align: left;
@@ -106,20 +106,20 @@ th {
   height: 15px;
   width: 170px;
 }
-thead {
+#leftdiv thead {
   /* <thead>의 모든 셀에 적용 */
   background: rgb(61, 59, 59);
   color: rgb(191, 197, 197);
 }
-tbody tr:nth-child(even) {
+#leftdiv tbody tr:nth-child(even) {
   /* 짝수 <tr>에 적용*/
   background: rgb(159, 161, 162);
 }
-tbody tr:hover {
+#leftdiv tbody tr:hover {
   /* 마우스가 올라오면 pink 배경 */
   background: rgb(52, 34, 37);
 }
-.rank {
+#leftdiv .rank {
   width: 45px;
   text-align: center;
   font-weight: bold;
@@ -161,4 +161,11 @@ div.details p {
   border-color: black;
   font-size: 1em;
   background-color: transparent;
+}
+.table {
+  background: none;
+}
+
+#otttable img:hover {
+  transform: scale(1.5);
 }
