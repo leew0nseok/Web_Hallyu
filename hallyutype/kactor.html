@@ -27,6 +27,11 @@
           location = url
         }
       }
+      function search() {
+        let name = document.getElementById('searchname').value
+        document.getElementById('output').innerText =
+          artist + '도 한류를 대표하는 그룹이죠!'
+      }
     </script>
   </head>
   <body>
@@ -116,17 +121,20 @@
         <input type="button" value="그림으로 보기" onclick="change()" />
       </div>
       <div class="divdiv" id="rightdiv">
-        <h3>배우 사진 미리보기</h3>
-        <form>
-          <select id="view" onchange="showImage()">
-            <option value="images/이민호.jpg" selected>이민호</option>
-            <option value="images/현빈.jpg">현빈</option>
-            <option value="images/공유.jpg">공유</option>
-            <option value="images/송혜교.jpg">송혜교</option>
-            <option value="images/송중기.jpg">송중기</option>
-          </select>
-
-          <img id="viewimg" src="images/이민호.jpg" alt="" />
+        <h3>다른 배우 찾아보기</h3>
+        <h5>왼쪽에 없는 다른 배우가 궁금하신가요?</h5>
+        <h5>궁금하신 배우의 이름을 입력해주세요!</h5>
+        <h5>이름을 입력하면 해당 배우의 네이버 프로필로 이동합니다!!</h5>
+        <hr />
+        <form
+          action="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query="
+          method="get"
+        >
+          <div id="searchform">
+            <label>배우 이름 : <input name="query" type="text" /></label>
+            <input type="submit" value="검색" />
+          </div>
+          <img src="images/물음표.jpg" width="300" height="300" alt="" />
         </form>
       </div>
     </div>
